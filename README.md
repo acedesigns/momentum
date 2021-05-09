@@ -18,3 +18,5 @@ There are database Seeders on the Bannk Foolder for Laravel to start the data. O
 
 ### Starting Database
 The database file is `momentum_bank_2021-05-09.sql`
+
+### The Flutter App is on the momentum_app folder

@@ -13,9 +13,9 @@ class NewAccount {
       this.accountoverdraft});
   factory NewAccount.fromJson(Map<String, dynamic> json) {
     return NewAccount(
-      accountnumber: json['date'],
-      accountbalance: json['start_time'],
-      accounttype: json['id'],
+      accountnumber: json['accountnumber'],
+      accountbalance: json['accountbalance'],
+      accounttype: json['accounttype'],
     );
   }
 }

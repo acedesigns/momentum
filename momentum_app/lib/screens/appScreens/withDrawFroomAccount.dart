@@ -10,21 +10,16 @@
 import 'dart:convert';
 import 'package:intl/intl.dart';
 import 'package:flutter/material.dart';
-import 'package:modal_progress_hud/modal_progress_hud.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 
 //import 'package:momentum_app/API/momentum_api.dart';
 
-class DepositToAccount extends StatefulWidget {
-  //final appoinmentId;
-  //final String process;
-  //final String path;
-
+class WithDrawFromAccount extends StatefulWidget {
   @override
-  _DepositToAccountState createState() => _DepositToAccountState();
+  _WithDrawFromAccountState createState() => _WithDrawFromAccountState();
 }
 
-class _DepositToAccountState extends State<DepositToAccount> {
+class _WithDrawFromAccountState extends State<WithDrawFromAccount> {
   var showSpinner = false;
   var userData;
 
@@ -50,8 +45,8 @@ class _DepositToAccountState extends State<DepositToAccount> {
     return Scaffold(
         appBar: AppBar(
           centerTitle: true,
-          title: Text('Deposit Money'),
-          backgroundColor: Theme.of(context).accentColor,
+          title: Text('Withdraw Money'),
+          backgroundColor: Theme.of(context).backgroundColor,
         ),
         body: Stack(
           children: <Widget>[
@@ -124,7 +119,7 @@ class _DepositToAccountState extends State<DepositToAccount> {
                                     padding: EdgeInsets.only(
                                         top: 8, bottom: 8, left: 10, right: 10),
                                     child: Text(
-                                      'Deposit',
+                                      'Withdraw',
                                       style: TextStyle(
                                         color: Colors.white,
                                         fontSize: 15.0,

@@ -11,6 +11,7 @@ import 'dart:convert';
 import 'package:intl/intl.dart';
 import 'package:flutter/material.dart';
 import 'package:modal_progress_hud/modal_progress_hud.dart';
+import 'package:momentum_app/screens/appScreens/withDrawFroomAccount.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 import 'package:momentum_app/screens/appScreens/depositToAccount.dart';
 
@@ -41,7 +42,7 @@ class _UserAccountState extends State<UserAccount>
       userData = user;
     });
 
-    print(userData['accounts']);
+    //print(userData['accounts']);
   }
 
   Widget build(BuildContext context) {
@@ -169,7 +170,12 @@ class _UserAccountState extends State<UserAccount>
                                                                     .all(1.0),
                                                             child: TextButton(
                                                               onPressed: () {
-                                                                DepositToAccount();
+                                                                Navigator.push(
+                                                                    context,
+                                                                    MaterialPageRoute(
+                                                                        builder:
+                                                                            (context) =>
+                                                                                DepositToAccount()));
                                                               },
                                                               child: Text(
                                                                   'Deposit'),
@@ -205,8 +211,13 @@ class _UserAccountState extends State<UserAccount>
                                                                       Colors
                                                                           .grey,
                                                                 ),
-                                                                onPressed:
-                                                                    () {}),
+                                                                onPressed: () {
+                                                                  Navigator.push(
+                                                                      context,
+                                                                      MaterialPageRoute(
+                                                                          builder: (context) =>
+                                                                              WithDrawFromAccount()));
+                                                                }),
                                                           ),
                                                         ])
                                                   ],
